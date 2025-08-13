@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Restaurant Search Results</title>
+  <link rel="stylesheet" href="/css/style2.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🍽️ Restaurant Search Results</h1>
+
+    <% if (restaurants.length === 0) { %>
+      <p class="no-results">No restaurants found matching your criteria.</p>
+    <% } else { %>
+      <div class="restaurant-grid">
+        <% restaurants.forEach(restaurant => { %>
+          <div class="restaurant-card">
+            <h2><%= restaurant.name %></h2>
+            <p><strong>Borough:</strong> <%= restaurant.borough %></p>
+            <p><strong>Cuisine:</strong> <%= restaurant.cuisine %></p>
+            <p><strong>Address:</strong> <%= restaurant.address.building %>, <%= restaurant.address.street %>, <%= restaurant.address.zipcode %></p>
+            <p><strong>Restaurant ID:</strong> <%= restaurant.restaurant_id %></p>
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
+
+    <a href="/restaurants/search" class="btn-back">🔙 New Search</a>
+  </div>
+</body>
+</html>

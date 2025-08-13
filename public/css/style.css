@@ -1,0 +1,107 @@
+/* Body and general styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  margin: 0;
+  padding-top: 140px; /* space for sticky form */
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+/* Sticky search form */
+.search-form {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 20px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  max-width: 900px;
+  z-index: 1000;
+}
+
+/* Form row layout */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Each input group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 180px;
+  min-width: 150px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #34495e;
+  user-select: none;
+}
+
+/* Inputs style */
+.form-group input {
+  padding: 10px 15px;
+  border: 2px solid #2980b9;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  outline-offset: 2px;
+}
+
+.form-group input:focus {
+  border-color: #e91e63;
+  box-shadow: 0 0 8px #e91e63;
+}
+
+/* Submit button group */
+.submit-group {
+  flex: 0 0 120px;
+  align-self: flex-end;
+}
+
+.submit-group button {
+  background: #e91e63;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px 0;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-group button:hover {
+  background-color: #c2185b;
+  box-shadow: 0 6px 20px rgba(194, 24, 91, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .submit-group {
+    flex: 1 1 auto;
+    align-self: stretch;
+  }
+}

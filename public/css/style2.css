@@ -1,0 +1,113 @@
+/* Container fills most of the width with padding */
+.container {
+  max-width: 1200px;
+  margin: 40px auto 60px auto;
+  padding: 0 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+/* Keep heading style simple and clean */
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 30px;
+  user-select: none;
+  text-align: left;
+}
+
+/* No results message */
+.no-results {
+  font-size: 1.4rem;
+  color: #95a5a6;
+  margin-top: 60px;
+  user-select: none;
+  text-align: center;
+}
+
+/* Grid container for restaurant cards */
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* Each card - alternating pastel backgrounds */
+.restaurant-card {
+  background: #f9f9ff;
+  border-radius: 15px;
+  padding: 22px 28px;
+  box-shadow: 0 6px 20px rgba(90, 80, 200, 0.12);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: default;
+}
+
+/* Alternate card background color using nth-child */
+.restaurant-grid .restaurant-card:nth-child(odd) {
+  background: #f0f4ff;
+}
+
+.restaurant-grid .restaurant-card:nth-child(even) {
+  background: #e6f0ff;
+}
+
+.restaurant-card:hover {
+  box-shadow: 0 10px 30px rgba(38, 87, 223, 0.4);
+  background-color: #d8e3ff;
+}
+
+/* Restaurant name */
+.restaurant-card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2575fc;
+  font-weight: 700;
+  user-select: none;
+}
+
+/* Card info text */
+.restaurant-card p {
+  margin: 7px 0;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.restaurant-card strong {
+  color: #1b2a57;
+  user-select: none;
+}
+
+/* Back button with gradient background */
+.btn-back {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 32px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(38, 87, 223, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.btn-back:hover {
+  background: linear-gradient(90deg, #4e0cb9 0%, #1a58cc 100%);
+  box-shadow: 0 8px 25px rgba(30, 70, 190, 0.8);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 15px;
+  }
+  .restaurant-card {
+    padding: 18px 22px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
